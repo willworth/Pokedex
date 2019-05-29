@@ -16,14 +16,14 @@ class Pokedex extends Component {
             {id: 133, name: 'Eevee', type: 'normal', base_experience: 65}
           ]
           
-    }
+    };
     render(){
         return (
             <div className="Pokedex">
                 <h1>Pokedex</h1>
+                <p>Total experience : {this.props.exp}</p>
+                <p>{this.props.isWinner ? 'win': 'lose'}</p>
                 <div className="Pokedex-cards">
-
-
                 {this.props.pokemon.map((p)=> (
                     <Pokecard
                      id= {p.id}
